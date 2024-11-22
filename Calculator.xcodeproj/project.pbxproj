@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		8E82A9EC2CF06EED007C7A49 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ECC12D52CF08EBA0036C284 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Calculator.app; path = /Users/boriskravcenko/Documents/XCode/Calculator/build/Debug/Calculator.app; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				8E82A9EE2CF06EED007C7A49 /* Calculator */,
-				8E82A9ED2CF06EED007C7A49 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		8E82A9ED2CF06EED007C7A49 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8E82A9EC2CF06EED007C7A49 /* Calculator.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -67,7 +58,7 @@
 			packageProductDependencies = (
 			);
 			productName = Calculator;
-			productReference = 8E82A9EC2CF06EED007C7A49 /* Calculator.app */;
+			productReference = 8ECC12D52CF08EBA0036C284 /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +86,7 @@
 			mainGroup = 8E82A9E32CF06EEC007C7A49;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 8E82A9ED2CF06EED007C7A49 /* Products */;
+			productRefGroup = 8E82A9E32CF06EEC007C7A49;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
