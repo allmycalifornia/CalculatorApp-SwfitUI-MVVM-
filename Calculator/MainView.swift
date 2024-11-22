@@ -9,6 +9,10 @@ import SwiftUI
 
 struct MainView: View {
     
+    @State private var value: String = "0"
+    @State private var number: Double = 0.0
+    @State private var currentOperation: Operation = .none
+    
     // MARK: Property
     let buttonsArray: [[Buttons]] = [
         [.clear, .negative, .percent, .divide],
@@ -30,7 +34,7 @@ struct MainView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Text("0")
+                    Text(value)
                         .foregroundStyle(.white)
                         .font(.system(size: 90, weight: .light))
                         .padding(.horizontal, 28)
@@ -41,7 +45,7 @@ struct MainView: View {
                     HStack(spacing: 12){
                         ForEach(row, id: \.self) { item in
                             Button {
-                                //action
+                                self.didTap(item: item)
                             } label: {
                                 Text(item.rawValue)
                                     .frame(
@@ -57,6 +61,68 @@ struct MainView: View {
                 }
             }
             .padding(.bottom)
+        }
+    }
+    
+    // MARK: tap buttons methods
+    func didTap(item: Buttons) {
+        switch item {
+        case .plus:
+            currentOperation = .addition
+            number = Double(value) ?? 0
+            value = "0"
+        case .minus:
+            currentOperation = .substract
+            number = Double(value) ?? 0
+            value = "0"
+        case .multiply:
+            currentOperation = .muliply
+            number = Double(value) ?? 0
+            value = "0"
+        case .divide:
+            currentOperation = .divide
+            number = Double(value) ?? 0
+            value = "0"
+        case .equal:
+            if let currentValue = Double(value) {
+                value = String(performOperation(currentValue))
+            }
+        case .decimal:
+            if !value.contains(".") {
+                value += "."
+            }
+        case .negative:
+            if let currentValue = Double(value) {
+                value = String(-currentValue)
+            }
+        case .percent:
+            if let currentValue = Double(value) {
+                value = String(currentValue / 100)
+            }
+        case .clear:
+            value = "0"
+        default:
+            if value == "0" {
+                value = item.rawValue
+            } else {
+                value += item.rawValue
+            }
+        }
+    }
+    
+    // MARK: helping calculating methods
+    func performOperation(_ currentValue: Double) -> Double {
+        switch currentOperation {
+        case .addition:
+            return number + currentValue
+        case .substract:
+            return number - currentValue
+        case .muliply:
+            return number * currentValue
+        case .divide:
+            return number / currentValue
+        default:
+            return currentValue
         }
     }
     

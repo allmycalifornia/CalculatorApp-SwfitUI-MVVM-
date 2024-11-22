@@ -49,3 +49,7 @@ enum Buttons: String {
         }
     }
 }
+
+enum Operation {
+    case addition, substract, muliply, divide, none
+}
