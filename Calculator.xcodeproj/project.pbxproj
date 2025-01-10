@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		8EE9ADE02CF1051300F62A01 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EE9ADE02CF1051300F62A01 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Calculator.app; path = /Users/boriskravcenko/Documents/XCode/Calculator/build/Debug/Calculator.app; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,7 +33,6 @@
 			isa = PBXGroup;
 			children = (
 				8E82A9EE2CF06EED007C7A49 /* Calculator */,
-				8EE9ADE02CF1051300F62A01 /* Calculator.app */,
 			);
 			sourceTree = "<group>";
 		};
